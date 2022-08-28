@@ -17,10 +17,10 @@ using UnityEngine.InputSystem.Utilities;
 
 namespace RainbowJam.Controls
 {
-    public partial class @PlayerControls : IInputActionCollection2, IDisposable
+    public partial class @PlayerInputControls : IInputActionCollection2, IDisposable
     {
         public InputActionAsset asset { get; }
-        public @PlayerControls()
+        public @PlayerInputControls()
         {
             asset = InputActionAsset.FromJson(@"{
     ""name"": ""rainbow-jam-2022"",
@@ -941,8 +941,8 @@ namespace RainbowJam.Controls
         private readonly InputAction m_Player_Fire;
         public struct PlayerActions
         {
-            private @PlayerControls m_Wrapper;
-            public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            private @PlayerInputControls m_Wrapper;
+            public PlayerActions(@PlayerInputControls wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
@@ -997,8 +997,8 @@ namespace RainbowJam.Controls
         private readonly InputAction m_UI_TrackedDeviceOrientation;
         public struct UIActions
         {
-            private @PlayerControls m_Wrapper;
-            public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            private @PlayerInputControls m_Wrapper;
+            public UIActions(@PlayerInputControls wrapper) { m_Wrapper = wrapper; }
             public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
             public InputAction @Submit => m_Wrapper.m_UI_Submit;
             public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
