@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000c9db895d
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -792,8 +792,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1631010913, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
-      propertyPath: movementFactor
-      value: 3
+      propertyPath: jumpForce
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_RootOrder
@@ -801,11 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.495
       objectReference: {fileID: 0}
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.453
       objectReference: {fileID: 0}
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_LocalPosition.z
@@ -838,6 +838,22 @@ PrefabInstance:
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500179350573187690, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500179350573187690, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775766736843888210, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983784486844498065, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6184021657313451307, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_Name
