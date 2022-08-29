@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - DeathZone
   layers:
   - Default
   - TransparentFX
@@ -11,10 +12,10 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
   - 
-  - 
-  - 
-  - 
+  - RespawnInteraction
+  - DeathZone
   - 
   - 
   - 
@@ -43,4 +44,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1569315785
+    locked: 0
+  - name: BackgroundWidgits
+    uniqueID: 1726688955
     locked: 0

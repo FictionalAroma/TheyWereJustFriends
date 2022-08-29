@@ -12,7 +12,17 @@ namespace Player
 
         private void Awake()
         {
-            OnComplete += (_, args) => args.Animator.SetBool(ValueHash, false);
+            OnComplete += TurnOffValue;
+        }
+
+        private void OnDisable()
+        {
+            OnComplete -= TurnOffValue;
+        }
+
+        private void TurnOffValue(object _, AnimatorStateEventArgs args)
+        {
+            args.Animator.SetBool(ValueHash, false);
         }
 
         // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
