@@ -791,10 +791,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1631010913, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
-      propertyPath: jumpForce
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -838,22 +834,6 @@ PrefabInstance:
     - target: {fileID: 2033808639574116581, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500179350573187690, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500179350573187690, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775766736843888210, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5983784486844498065, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6184021657313451307, guid: d788a3432994e0f41b1ca6e6d8deec15, type: 3}
       propertyPath: m_Name
