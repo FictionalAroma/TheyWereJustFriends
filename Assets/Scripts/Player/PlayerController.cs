@@ -1,11 +1,15 @@
+using System;
+using System.Collections;
 using Assets.Scripts.Animation;
+using Assets.Scripts.Behaviors;
+using Environment;
 using RainbowJam.Controls;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerController : MonoBehaviour, PlayerInputControls.IPlayerActions
+    public class PlayerController : MonoBehaviour, PlayerInputControls.IPlayerActions, IRespawnClient
     {
         #region Consts
         private static readonly int PlayerMoveY = Animator.StringToHash("PlayerMoveY");
@@ -35,9 +39,14 @@ namespace Player
 
         #endregion
 
-        private Vector2 _currentMoveInputVector;
 
+        private Vector2 _currentMoveInputVector;
         private bool _canAttack = true;
+
+        public bool InRespawnProcess { get; set; }
+        public bool CanActivateSpawner { get; set; } = true;
+        [field:SerializeField] public float RespawnTimer { get; set; } = 1f;
+
 
         private void Awake()
         {
@@ -47,6 +56,13 @@ namespace Player
             SetControlCallbacks();
 
             ConfigureAnimator();
+        }
+        private void CacheControls()
+        {
+            _controls = new PlayerInputControls();
+            _moveAction = _controls.Player.Move;
+            _jumpAction = _controls.Player.Jump;
+            _attackAction = _controls.Player.Fire;
         }
 
         private void ConfigureAnimator()
@@ -58,19 +74,6 @@ namespace Player
             attackEndBehavior.ValueHash = Attacking;
             attackEndBehavior.OnComplete += OnAttackCompleted;
         }
-
-        private void CacheControls()
-        {
-            _controls = new PlayerInputControls();
-            _moveAction = _controls.Player.Move;
-            _jumpAction = _controls.Player.Jump;
-            _attackAction = _controls.Player.Fire;
-
-
-
-        }
-
-
         private void SetControlCallbacks()
         {
             _moveAction.started += OnMove;
@@ -139,7 +142,10 @@ namespace Player
         private void OnAttackCompleted(object sender, AnimatorStateEventArgs args) => _canAttack = true;
 
 
-
+        private void OnDestroy()
+        {
+            UnhookAnimator();
+        }
         private void OnDisable()
         {
             DisableControls();
@@ -151,5 +157,31 @@ namespace Player
             _controls.Player.Disable();
         }
 
+
+        private void UnhookAnimator()
+        {
+            var attackEndBehavior = _animator.GetBehaviour<AttackEndBehavior>();
+            attackEndBehavior.OnComplete -= OnAttackCompleted;
+        }
+
+
+        public void RespawnActivated(RespawnPoint currentPoint)
+        {
+            StartCoroutine(DoRespawn(currentPoint));
+        }
+
+        private IEnumerator DoRespawn(RespawnPoint currentPoint)
+        {
+            _animator.GetBool("Respawning");
+            DisableControls();
+            _playerBody.Sleep();
+            transform.position = currentPoint.transform.position;
+            yield return new WaitForSeconds(RespawnTimer);
+
+            //yield return new WaitUntil(() => !_animator.GetBool("Respawning"));
+
+            EnableControls();
+            _playerBody.WakeUp();
+        }
     }
 }
