@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 782085930}
   - component: {fileID: 782085932}
+  - component: {fileID: 782085933}
   m_Layer: 8
-  m_Name: respawner
-  m_TagString: Untagged
+  m_Name: respawnertrigger
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +49,19 @@ CircleCollider2D:
   m_Offset: {x: -0.033649683, y: 0}
   serializedVersion: 2
   m_Radius: 2.49879
+--- !u!114 &782085933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782085929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b010cb3e43667b947af00bd4d61fd555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityRespawnObject: {fileID: 6184021657313451307}
 --- !u!1 &1270461820068667782
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +73,7 @@ GameObject:
   - component: {fileID: 6802016820735855542}
   m_Layer: 6
   m_Name: weapons
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +107,7 @@ GameObject:
   - component: {fileID: 6752715512331576284}
   m_Layer: 6
   m_Name: Trowel
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,7 +223,7 @@ GameObject:
   - component: {fileID: 2864619005028773737}
   m_Layer: 6
   m_Name: leg-left
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,7 +307,7 @@ GameObject:
   - component: {fileID: 4500179350573187690}
   m_Layer: 6
   m_Name: arm-right
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,7 +392,7 @@ GameObject:
   - component: {fileID: 1230224668858284655}
   m_Layer: 6
   m_Name: arm-left
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,7 +477,7 @@ GameObject:
   - component: {fileID: 7373268046581426151}
   m_Layer: 6
   m_Name: hand-right
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,7 +562,7 @@ GameObject:
   - component: {fileID: 5983784486844498065}
   m_Layer: 6
   m_Name: body_front
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -637,7 +651,7 @@ GameObject:
   - component: {fileID: 5486985789434216086}
   m_Layer: 6
   m_Name: leg-right
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -726,7 +740,7 @@ GameObject:
   - component: {fileID: 4775766736843888215}
   m_Layer: 6
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,6 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementFactor: 3
   jumpForce: 12
+  <RespawnTimer>k__BackingField: 1
 --- !u!50 &4775766736843888210
 Rigidbody2D:
   serializedVersion: 4
@@ -887,7 +902,7 @@ GameObject:
   - component: {fileID: 3243701597231207510}
   m_Layer: 6
   m_Name: hand-left
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,7 +986,7 @@ GameObject:
   - component: {fileID: 8686736376197450314}
   m_Layer: 6
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

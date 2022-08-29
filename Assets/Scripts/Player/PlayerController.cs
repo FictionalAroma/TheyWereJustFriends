@@ -47,6 +47,8 @@ namespace Player
         public bool CanActivateSpawner { get; set; } = true;
         [field:SerializeField] public float RespawnTimer { get; set; } = 1f;
 
+        private float weaponAnimTime = 0.5f;
+
 
         private void Awake()
         {
@@ -136,10 +138,21 @@ namespace Player
             {
                 _animator.SetBool(Attacking, true);
                 _canAttack = false;
+                StartCoroutine(AttackTimer(weaponAnimTime));
             }
         }
 
-        private void OnAttackCompleted(object sender, AnimatorStateEventArgs args) => _canAttack = true;
+        private IEnumerator AttackTimer(float f)
+        {
+            yield return new WaitForSeconds(f);
+            _canAttack = true;
+
+        }
+
+        private void OnAttackCompleted(object sender, AnimatorStateEventArgs args)
+        {
+
+        }
 
 
         private void OnDestroy()

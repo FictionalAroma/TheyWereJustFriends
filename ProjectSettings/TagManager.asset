@@ -5,15 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - DeathZone
+  - Terrain
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Terrain
   - Water
   - UI
   - Player
-  - 
+  - Enemy
   - RespawnInteraction
   - DeathZone
   - 
