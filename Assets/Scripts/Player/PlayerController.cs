@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Assets.Scripts.Animation;
 using Assets.Scripts.Behaviors;
+using Enemy;
 using Environment;
 using RainbowJam.Controls;
 using UnityEngine;
@@ -116,9 +117,7 @@ namespace Player
 
             if (playerXMovementAbs > Mathf.Epsilon)
             {
-                var temp = transform.localScale;
-                temp.x = movementVectorX > 0 ? 1f : -1f;
-                transform.localScale = temp;
+                transform.localScale = new Vector2(Mathf.Sign(movementVectorX), 1f);
             }
         }
 
@@ -134,7 +133,7 @@ namespace Player
 
         public void OnFire(InputAction.CallbackContext context)
         {
-            if (_canAttack && context.performed)
+            if (_canAttack)
             {
                 _animator.SetBool(Attacking, true);
                 _canAttack = false;
@@ -195,6 +194,20 @@ namespace Player
 
             EnableControls();
             _playerBody.WakeUp();
+        }
+
+        private void OnCollisionEnter2D(Collision2D col)
+        {
+
+            if (col.gameObject.TryGetComponent<EnemyController>(out var enemy))
+            {
+                TakeDamage(col.GetContact(0), enemy);
+            }
+        }
+
+        private void TakeDamage(ContactPoint2D getContact, EnemyController enemyController)
+        {
+            
         }
     }
 }
