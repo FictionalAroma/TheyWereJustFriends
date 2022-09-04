@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerStatController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int playerStartHP;
+    [SerializeField] private TMP_Text playerHPDisplay;
 
-    // Update is called once per frame
-    void Update()
+    public int HP { get; private set; }
+
+    public void AdjustHP(int amount)
     {
-        
+        HP += amount;
+        playerHPDisplay.text = HP.ToString("#00");
     }
 }

@@ -13,10 +13,11 @@ GameObject:
   - component: {fileID: 7787311926543258528}
   - component: {fileID: 7787311926543258529}
   - component: {fileID: 7787311926543258542}
+  - component: {fileID: 519111406}
   m_Layer: 7
   m_Name: darkthought
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -147,6 +148,18 @@ MonoBehaviour:
     rayDistance: 1
     fireOnHit: 0
     debugColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!114 &519111406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787311926543258543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70010d3f7c8d46e44a2b31a3bb4bfc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7787311927324628971
 GameObject:
   m_ObjectHideFlags: 0
