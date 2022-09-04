@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatController : MonoBehaviour
 {
     [SerializeField] private int playerStartHP;
-    [SerializeField] private TMP_Text playerHPDisplay;
+    [SerializeField] private SliderDisplay playerHPDisplay;
 
     public int HP { get; private set; }
+
+    public void Awake()
+    {
+        HP = playerStartHP;
+        playerHPDisplay.MaxValue = playerStartHP;
+        playerHPDisplay.SetToMax();
+    }
 
     public void AdjustHP(int amount)
     {
         HP += amount;
-        playerHPDisplay.text = HP.ToString("#00");
+        playerHPDisplay.SetValues(HP);
     }
 }
