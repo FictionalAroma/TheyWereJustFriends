@@ -226,7 +226,7 @@ namespace RainbowJam.Controls
                 {
                     ""name"": """",
                     ""id"": ""9ea3b31b-14fa-431b-bcea-8c1e26b6cf8d"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
