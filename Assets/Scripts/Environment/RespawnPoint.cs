@@ -1,5 +1,4 @@
 ﻿using System;
-using Assets.Scripts.Behaviors;
 using JetBrains.Annotations;
 using UnityEditor.Build;
 using UnityEngine;

@@ -1,5 +1,5 @@
 using System;
-using Assets.Scripts.Behaviors;
+using Behaviors;
 using UnityEngine;
 
 namespace Environment

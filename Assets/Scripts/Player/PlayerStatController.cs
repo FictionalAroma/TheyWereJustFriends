@@ -1,24 +1,26 @@
-
+using UI;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerStatController : MonoBehaviour
+namespace Player
 {
-    [SerializeField] private int playerStartHP;
-    [SerializeField] private SliderDisplay playerHPDisplay;
-
-    public int HP { get; private set; }
-
-    public void Awake()
+    public class PlayerStatController : MonoBehaviour
     {
-        HP = playerStartHP;
-        playerHPDisplay.MaxValue = playerStartHP;
-        playerHPDisplay.SetToMax();
-    }
+        [SerializeField] private int playerStartHP;
+        [SerializeField] private SliderDisplay playerHPDisplay;
 
-    public void AdjustHP(int amount)
-    {
-        HP += amount;
-        playerHPDisplay.SetValues(HP);
+        public int HP { get; private set; }
+
+        public void Awake()
+        {
+            HP = playerStartHP;
+            playerHPDisplay.MaxValue = playerStartHP;
+            playerHPDisplay.SetToMax();
+        }
+
+        public void AdjustHP(int amount)
+        {
+            HP += amount;
+            playerHPDisplay.SetValues(HP);
+        }
     }
 }

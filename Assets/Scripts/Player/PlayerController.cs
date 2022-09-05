@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using Assets.Scripts.Animation;
-using Assets.Scripts.Behaviors;
+using Animation;
+using Behaviors;
 using Enemy;
 using Environment;
 using RainbowJam.Controls;
