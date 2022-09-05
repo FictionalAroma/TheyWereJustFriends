@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Environment;
+﻿using Environment;
 using UnityEngine;
 
-namespace Assets.Scripts.Behaviors
+namespace Behaviors
 {
     [RequireComponent(typeof(CircleCollider2D))]
     public class RespawnBehavior : MonoBehaviour

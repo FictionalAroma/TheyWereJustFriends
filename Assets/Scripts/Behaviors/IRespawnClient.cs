@@ -1,7 +1,7 @@
 ﻿using Environment;
 using UnityEngine;
 
-namespace Assets.Scripts.Behaviors
+namespace Behaviors
 {
     
     public interface IRespawnClient

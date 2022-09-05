@@ -1,5 +1,4 @@
 ﻿using System;
-using Assets.Scripts.Animation;
 using UnityEngine;
 
 namespace Animation

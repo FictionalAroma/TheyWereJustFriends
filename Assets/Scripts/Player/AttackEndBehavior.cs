@@ -1,6 +1,5 @@
 using System;
 using Animation;
-using Assets.Scripts.Animation;
 using UnityEngine;
 
 namespace Player
