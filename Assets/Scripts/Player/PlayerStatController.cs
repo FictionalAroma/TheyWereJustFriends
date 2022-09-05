@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStatController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int playerStartHP;
+    [SerializeField] private SliderDisplay playerHPDisplay;
+
+    public int HP { get; private set; }
+
+    public void Awake()
     {
-        
+        HP = playerStartHP;
+        playerHPDisplay.MaxValue = playerStartHP;
+        playerHPDisplay.SetToMax();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AdjustHP(int amount)
     {
-        
+        HP += amount;
+        playerHPDisplay.SetValues(HP);
     }
 }

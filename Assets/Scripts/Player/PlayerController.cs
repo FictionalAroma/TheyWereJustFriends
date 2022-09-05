@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 namespace Player
 {
-    public class PlayerController : MonoBehaviour, PlayerInputControls.IPlayerActions, IRespawnClient
+    public class PlayerController : MonoBehaviour, PlayerInputControls.IPlayerActions, IRespawnClient, IKnockbackReaction
     {
         #region Consts
         private static readonly int PlayerMoveY = Animator.StringToHash("PlayerMoveY");
@@ -49,12 +49,16 @@ namespace Player
         [field:SerializeField] public float RespawnTimer { get; set; } = 1f;
 
         private float weaponAnimTime = 0.5f;
+        private PlayerStatController _statsController;
+        private bool _letJesusDrive;
+        private bool _isGrounded;
 
 
         private void Awake()
         {
             CacheControls();
             _playerBody = GetComponent<Rigidbody2D>();
+            _statsController = GetComponent<PlayerStatController>();
 
             SetControlCallbacks();
 
@@ -102,6 +106,26 @@ namespace Player
         // Update is called once per frame
         void FixedUpdate()
         {
+            DoMovement();
+            DoTerrainDetection();
+        }
+
+        private void DoTerrainDetection()
+        {
+            if (_playerBody.IsTouchingLayers(LayerMask.GetMask("Terrain")))
+            {
+                SetGrounded();
+            }
+        }
+
+        private void SetGrounded()
+        {
+            _letJesusDrive = false;
+            _isGrounded = true;
+        }
+
+        private void DoMovement()
+        {
             float movementVectorX = _currentMoveInputVector.x * movementFactor;
 
             var playerXMovementAbs = Mathf.Abs(movementVectorX);
@@ -109,8 +133,11 @@ namespace Player
             var velocity = _playerBody.velocity;
             var velTemp = velocity;
 
-            velTemp.x = movementVectorX;
-            _playerBody.velocity += (velTemp - velocity);
+            if (!_letJesusDrive)
+            {
+                velTemp.x = movementVectorX;
+                _playerBody.velocity += (velTemp - velocity);
+            }
 
             _animator.SetFloat(PlayerMoveX, playerXMovementAbs);
             _animator.SetFloat(PlayerMoveY, _playerBody.velocity.y);
@@ -128,7 +155,11 @@ namespace Player
 
         public void OnJump(InputAction.CallbackContext context)
         {
-            _playerBody.velocity = new Vector2(_playerBody.velocity.x, jumpForce);
+            if (_isGrounded || _letJesusDrive)
+            {
+                _letJesusDrive = false;
+                _playerBody.velocity = new Vector2(_playerBody.velocity.x, _isGrounded ? jumpForce : jumpForce/3.0f);
+            }
         }
 
         public void OnFire(InputAction.CallbackContext context)
@@ -201,13 +232,41 @@ namespace Player
 
             if (col.gameObject.TryGetComponent<EnemyController>(out var enemy))
             {
-                TakeDamage(col.GetContact(0), enemy);
+                if (!KnockbackActive)
+                {
+                    TakeDamage(enemy);
+                }
             }
         }
 
-        private void TakeDamage(ContactPoint2D getContact, EnemyController enemyController)
+        private void TakeDamage(EnemyController enemyController)
         {
-            
+            _statsController.AdjustHP(-10);
+        }
+
+        public float KnockbackForce { get; set; } = 10f;
+        public bool KnockbackActive { get; set; }
+        [field: SerializeField]private float KnockbackTimer { get; set; } = 0.1f;
+
+        public void Knockback(Transform trigger)
+        {
+            if (!KnockbackActive)
+            {
+                var directionVector = (this.transform.position - trigger.position).normalized;
+                directionVector.y = 0.5f;   
+                _playerBody.velocity = (directionVector.normalized * KnockbackForce);
+                StartCoroutine(RunKnockbackEffect());
+            }
+        }
+
+        public IEnumerator RunKnockbackEffect()
+        {
+            KnockbackActive = true;
+            _letJesusDrive = true;
+            DisableControls();
+            yield return new WaitForSeconds(KnockbackTimer);
+            EnableControls();
+            KnockbackActive = false;
         }
     }
 }

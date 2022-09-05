@@ -13,6 +13,10 @@ namespace Environment
             {
                 respawn.DoRespawn();
             }
+            else
+            {
+                Destroy(col.gameObject);
+            }
         }
     }
 }
