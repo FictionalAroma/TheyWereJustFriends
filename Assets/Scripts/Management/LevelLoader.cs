@@ -13,7 +13,7 @@ namespace Management
 
         public static void GoToMainGame()
         {
-            SceneManager.LoadScene("MainGame");
+            SceneManager.LoadScene("VoidTest");
         }
 
         private void Start()
