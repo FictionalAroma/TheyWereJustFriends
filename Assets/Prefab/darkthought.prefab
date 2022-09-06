@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7787311926543258529}
   - component: {fileID: 7787311926543258542}
   - component: {fileID: 519111406}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: darkthought
   m_TagString: Enemy
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7787311927324628970}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: RaycastPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}

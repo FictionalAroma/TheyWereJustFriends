@@ -12,17 +12,17 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Terrain
+  - 
   - Water
   - UI
+  - Terrain
   - Player
-  - Enemy
-  - RespawnInteraction
-  - DeathZone
   - Weapon
   - 
   - 
   - 
+  - Enemy
+  - RespawnInteraction
   - 
   - 
   - 
@@ -32,7 +32,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - DeathZone
   - 
   - 
   - 
