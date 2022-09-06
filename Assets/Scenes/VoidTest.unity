@@ -505,7 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 341175256}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PlaceholderTerrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 423713872}
   - component: {fileID: 423713871}
   - component: {fileID: 423713870}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 672722663}
   - component: {fileID: 672722662}
   - component: {fileID: 672722661}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1230,7 @@ GameObject:
   - component: {fileID: 743345476}
   - component: {fileID: 743345475}
   - component: {fileID: 743345474}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1363,7 +1363,7 @@ GameObject:
   - component: {fileID: 751606779}
   - component: {fileID: 751606778}
   - component: {fileID: 751606777}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 1088314126}
   - component: {fileID: 1088314125}
   - component: {fileID: 1088314124}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,7 +2036,7 @@ GameObject:
   - component: {fileID: 1415900540}
   - component: {fileID: 1415900539}
   - component: {fileID: 1415900541}
-  m_Layer: 8
+  m_Layer: 23
   m_Name: DeathZone
   m_TagString: DeathZone
   m_Icon: {fileID: 0}
@@ -2478,7 +2478,7 @@ GameObject:
   - component: {fileID: 1931596967}
   - component: {fileID: 1931596966}
   - component: {fileID: 1931596965}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2634,7 +2634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36862746}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2768,7 +2768,7 @@ GameObject:
   - component: {fileID: 2004060978}
   - component: {fileID: 2004060977}
   - component: {fileID: 2004060976}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2901,7 +2901,7 @@ GameObject:
   - component: {fileID: 2096949531}
   - component: {fileID: 2096949530}
   - component: {fileID: 2096949529}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3091,7 +3091,7 @@ GameObject:
   - component: {fileID: 2130297449}
   - component: {fileID: 2130297448}
   - component: {fileID: 2130297447}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
