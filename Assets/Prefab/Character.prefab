@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 782085930}
   - component: {fileID: 782085932}
   - component: {fileID: 782085933}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: respawnertrigger
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2140692837}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6802016820735855542}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: weapons
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 4280085928846256984}
   - component: {fileID: 5793979202860112936}
   - component: {fileID: 8180066302723092978}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Trowel
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7108539026941774180}
   - component: {fileID: 2864619005028773737}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: leg-left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828147144050623993}
   - component: {fileID: 4500179350573187690}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: arm-right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4870149094233936002}
   - component: {fileID: 1230224668858284655}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: arm-left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 828073029537239611}
   - component: {fileID: 7373268046581426151}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: hand-right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7137300805368558174}
   - component: {fileID: 5983784486844498065}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: body_front
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210289243020381345}
   - component: {fileID: 5486985789434216086}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: leg-right
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 4775766736843888209}
   - component: {fileID: 4775766736843888215}
   - component: {fileID: 6495155326738756391}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3777284344325649853}
   - component: {fileID: 3243701597231207510}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: hand-left
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1132,7 +1132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738435022887713783}
   - component: {fileID: 8686736376197450314}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: head
   m_TagString: Player
   m_Icon: {fileID: 0}
