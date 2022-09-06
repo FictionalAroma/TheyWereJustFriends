@@ -89,6 +89,9 @@ namespace Player
             _jumpAction.canceled += OnJump;
             //_jumpAction.performed += OnJump;
             _attackAction.performed += OnFire;
+
+            _controls.Player.Pause.performed += OnPause;
+
         }
 
         private void OnEnable()
@@ -170,6 +173,11 @@ namespace Player
                 _canAttack = false;
                 StartCoroutine(AttackTimer(weaponAnimTime));
             }
+        }
+
+        public void OnPause(InputAction.CallbackContext context)
+        {
+            PauseMenuManager.Instance.TogglePause();
         }
 
         private IEnumerator AttackTimer(float f)
