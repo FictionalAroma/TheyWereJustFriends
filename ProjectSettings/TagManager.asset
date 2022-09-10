@@ -35,7 +35,7 @@ TagManager:
   - DeathZone
   - 
   - 
-  - 
+  - Background
   - 
   - 
   - 
@@ -50,4 +50,10 @@ TagManager:
     locked: 0
   - name: BackgroundWidgits
     uniqueID: 1726688955
+    locked: 0
+  - name: SceneBackground
+    uniqueID: 1737186747
+    locked: 0
+  - name: Terrain
+    uniqueID: 2424595361
     locked: 0
