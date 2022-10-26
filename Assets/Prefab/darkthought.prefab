@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7787311926543258529}
   - component: {fileID: 7787311926543258542}
   - component: {fileID: 519111406}
+  - component: {fileID: 7172590046391120741}
   m_Layer: 12
   m_Name: darkthought
   m_TagString: Enemy
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7787311926543258543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.33, y: 2.505, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -145,7 +146,7 @@ MonoBehaviour:
     fireOnHit: 1
     debugColor: {r: 0, g: 1, b: 0, a: 1}
   - rayDirection: {x: 0, y: -1}
-    rayDistance: 1
+    rayDistance: 1.5
     fireOnHit: 0
     debugColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!114 &519111406
@@ -160,6 +161,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70010d3f7c8d46e44a2b31a3bb4bfc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &7172590046391120741
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787311926543258543}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 9405d1f8ac1516043bbcb52a2a587bdc, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9405d1f8ac1516043bbcb52a2a587bdc, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7787311927324628971
 GameObject:
   m_ObjectHideFlags: 0
